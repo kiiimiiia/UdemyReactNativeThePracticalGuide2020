@@ -15,32 +15,29 @@ import {
   Text,
   StatusBar,
   Button,
+  TextInput,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
-  const [outputText , setOutputText] = useState('Open up App.js to start working on your app')
+ 
   return (
-  <View style={styles.container}>
-    <Text>{outputText}</Text> 
-    <Button title = "Change Text" onPress={() => setOutputText('The text changed')}/>
+  <View style={{padding : 30}}>
+    <View style={{flexDirection: 'row' , justifyContent: 'space-between' , alignItems:'center'}}>
+      <TextInput
+       placeholder="CourseGoal"
+       style={{ width:'80%' , borderColor:'black' , borderWidth:1}}/>
+      <Button title="Add"/>
+    </View>
+    <View>
+
+    </View>
+
   </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:'#fff',
-    alignItems:'center',
-    justifyContent: 'center',
-  }
+
 });
 
